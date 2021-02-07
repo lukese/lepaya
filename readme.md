@@ -6,7 +6,7 @@ Lepaya Application chosen Option A - Service Provider App
 
 This is a NodeJS simple backend written in Typescript and expressJs, with static data output via a REST API
 
-The front-end is a VueJS SPA with default HTML and Bootstrap library used for basic HTML element styling for the 3 part Form
+The front-end is a VueJS SPA with default HTML for the 3 part Form
 
 It is written in an OO MVC manner in ES6, the express server is routing the request via the companies controller which is outputting the request body to the API. 
 
@@ -21,5 +21,10 @@ It is written in an OO MVC manner in ES6, the express server is routing the requ
   
 ## Libraries Used
 
+VueJS 3.0 - Used due to the relevance of job description, SPA works nicely for separating the backend / frontend
 
-VueJS 3.0
+ExpressJs - Used due to being able to write a nodeJS backend quickly and using typescript
+
+Just basic HTML used for the components, I decided not to use a component library as it creates un-necessarily complication.
+
+
