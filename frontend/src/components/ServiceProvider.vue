@@ -11,6 +11,7 @@
     />
     <job-offers
       v-if="formStage === 3"
+      :clients="clients"
     />
   </div>
 </template>
@@ -31,10 +32,9 @@ export default {
     },
     async getClientOffers(selectedSkills) {
       // Make request to get client offers based on skills
-      const clients = await http.post('/companies', {
+      this.clients = await http.post('/companies', {
         skills: selectedSkills,
       });
-      console.log(clients);
 
       // Pass data into the final stage
 
@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       formStage: 2,
+      clients: [],
     };
   },
 };
