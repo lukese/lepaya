@@ -23,7 +23,6 @@
               v-model="selectedSkills"
               :value="skill"
               :id="skill"
-              @change="handleSkill(skill)"
             />
             <label
               class="custom-control-label"

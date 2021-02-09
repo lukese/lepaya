@@ -11,7 +11,7 @@
     />
     <job-offers
       v-if="formStage === 3"
-      :clients="clients"
+      :offers="offers.data"
     />
   </div>
 </template>
@@ -19,12 +19,14 @@
 import http from '@/http';
 import SkillsStage from '@/components/SkillsStage';
 import ProfileStage from '@/components/ProfileStage';
+import JobOffers from '@/components/JobOffers';
 
 export default {
   name: 'service-provider',
   components: {
     ProfileStage,
     SkillsStage,
+    JobOffers,
   },
   methods: {
     chooseSkills() {
@@ -32,19 +34,18 @@ export default {
     },
     async getClientOffers(selectedSkills) {
       // Make request to get client offers based on skills
-      this.clients = await http.post('/companies', {
+      this.offers = await http.post('/companies', {
         skills: selectedSkills,
       });
 
-      // Pass data into the final stage
-
       // Show the offers page
+      this.formStage = 3;
     },
   },
   data() {
     return {
       formStage: 2,
-      clients: [],
+      offers: [],
     };
   },
 };
