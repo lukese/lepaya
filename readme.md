@@ -16,7 +16,8 @@ It is written in an OO MVC manner in ES6, the express server is routing the requ
 2. run `npm install` to install all dependencies
 3. run `cp .env.example .env` to create environmental variables file
 4. run `npm run start` on the root directory to run the NodeJS backend
-5. run `cd frontend && npm run dev` to serve the front-end website
+5. run `cd frontend && npm install` for installing the Vue SPA
+5. run `npm run dev` to serve the front-end website
 6. visit `http://localhost:8080` to view in the browser
   
 ## Libraries Used
@@ -25,6 +26,9 @@ VueJS 3.0 - Used due to the relevance of job description, SPA works nicely for s
 
 ExpressJs - Used due to being able to write a nodeJS backend quickly and using typescript
 
-Just basic HTML used for the components, I decided not to use a component library as it creates un-necessarily complication.
+Bootstrap 4 - Used for quick easy HTML styling
 
+Moment - For easy formatting of dates
+
+word-ext - Random words generation
 
