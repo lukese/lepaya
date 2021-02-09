@@ -1,8 +1,6 @@
 <template>
   <div>
-    <service-provider
-      v-on:nextStage="nextStage"
-    />
+    <service-provider/>
   </div>
 </template>
 

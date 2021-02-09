@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Service Provide Sign Up</h1>
     <profile-stage
       v-if="formStage === 1"
       v-on:completedProfile="chooseSkills"
@@ -44,7 +43,7 @@ export default {
   },
   data() {
     return {
-      formStage: 2,
+      formStage: 1,
       offers: [],
     };
   },
