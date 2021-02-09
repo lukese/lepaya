@@ -8,7 +8,7 @@ export class CompanyGenerator {
 
         // Add 3 random dated offers
         for (let i = 0; i < 3; i++) {
-            generatedOffers.push(this.addOffer(generatedOffers, skills));
+            generatedOffers.push(this.getOffer(generatedOffers, skills));
         }
 
         // Add 2 offers with same date
@@ -16,7 +16,7 @@ export class CompanyGenerator {
             const startDate = new Date(2021, 2, 1);
             const endDate = new Date(2021, 2, 6);
 
-            generatedOffers.push(this.addOffer(generatedOffers, skills, {
+            generatedOffers.push(this.getOffer(generatedOffers, skills, {
                 startDate,
                 endDate
             }));
@@ -25,14 +25,12 @@ export class CompanyGenerator {
         return generatedOffers;
     }
 
-    addOffer(generatedOffers: Array<object>, skills: Array<string>, dates?: any) {
-        const appendedOffers = [];
-
+    getOffer(generatedOffers: Array<object>, skills: Array<string>, dates?: any) {
         const random = new Randoma({seed: 10});
         let startDate = random.dateInRange(new Date(2021,2,1), new Date(2021,2,10));
         const endDate = moment(startDate).add(5, 'd').toDate();
 
-        appendedOffers.push({
+        return {
             "name": words({
                 exactly: 5,
                 join: ' ',
@@ -44,8 +42,6 @@ export class CompanyGenerator {
             "skills": skills,
             "startDate": dates ? dates.startDate : startDate,
             "endDate": dates ? dates.endDate : endDate,
-        })
-
-        return appendedOffers;
+        }
     }
 }
