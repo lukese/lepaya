@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <service-provider
+      v-on:nextStage="nextStage"
+    />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import ServiceProvider from '@/components/ServiceProvider';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    ServiceProvider,
   },
 };
 </script>

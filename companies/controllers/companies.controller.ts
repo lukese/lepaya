@@ -1,4 +1,5 @@
 import express from 'express';
+import { CompanyGenerator } from "../companyGenerator";
 
 class CompaniesController {
     private static instance: CompaniesController;
@@ -11,12 +12,8 @@ class CompaniesController {
     }
 
     async getCompaniesForSkills(req: express.Request, res: express.Response) {
-        // Get a random set of companies
-        const companies = {
-            "Id": 1
-        };
-
-        //
+        const companies = new CompanyGenerator()
+            .getCompanies(req.body.skills);
 
         res.status(200).send(companies);
     }

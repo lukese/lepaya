@@ -9,7 +9,7 @@ export class CompaniesRoutes extends CommonRoutesConfig {
 
     configureRoutes() {
         this.app.route(`/companies`)
-            .get(CompaniesController.getCompaniesForSkills)
+            .post(CompaniesController.getCompaniesForSkills)
 
         return this.app;
     }
