@@ -13,8 +13,11 @@
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
     "moment": "^2.29.1",
+    "node-sass": "^5.0.0",
     "popper.js": "^1.16.1",
+    "sass-loader": "^10.1.1",
     "simple-vue-validator": "^0.16.0",
+    "sweet-modal-vue": "^2.0.0",
     "vee-validate": "^4.1.16",
     "vue": "^3.0.0",
     "yup": "^0.32.8"
