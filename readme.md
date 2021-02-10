@@ -16,7 +16,7 @@ It is written in an OO MVC manner in ES6, the express server is routing the requ
 2. run `npm install` to install all dependencies
 4. run `npm run start` on the root directory to run the NodeJS backend
 5. run `cd frontend && npm install` for installing the Vue SPA
-5. run `npm run dev` to serve the front-end website
+5. run `npm run serve` to serve the front-end website
 6. visit `http://localhost:8080` to view in the browser
   
 ## Libraries Used
