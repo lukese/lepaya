@@ -89,6 +89,7 @@ export default {
     },
     hideOffer() {
       this.disabled = true;
+      // this.$emit('offerToBottom', this.offer);
     },
   },
 };
