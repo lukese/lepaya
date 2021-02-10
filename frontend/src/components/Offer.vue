@@ -6,9 +6,11 @@
     <div class="card-body">
       <h5 class="card-title">{{ ucFirst(offer.name) }}</h5>
       <p class="card-text">{{ offer.description }}</p>
-      <div class="d-flex flex-column">
-          <span>Start Date: {{ startDate }}</span>
-          <span>
+      <div class="">
+          <span class="badge badge-secondary mr-2">
+            Start Date: {{ startDate }}
+          </span>
+          <span class="badge badge-secondary">
             End Date: {{ endDate }}
           </span>
       </div>
@@ -91,13 +93,16 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
-  .card {
-    margin-bottom: 20px;
+<style
+  lang="scss"
+  scoped
+>
+.card {
+  margin-bottom: 20px;
 
-    &.disabled {
-        opacity: 0.55;
-        pointer-events: none
-     }
+  &.disabled {
+    opacity: 0.55;
+    pointer-events: none
   }
+}
 </style>
