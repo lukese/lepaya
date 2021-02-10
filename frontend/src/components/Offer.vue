@@ -4,7 +4,7 @@
     :class="{ disabled: disabled }"
   >
     <div class="card-body">
-      <h5 class="card-title">{{ offer.name }}</h5>
+      <h5 class="card-title">{{ ucFirst(offer.name) }}</h5>
       <p class="card-text">{{ offer.description }}</p>
       <div class="d-flex flex-column">
           <span>Start Date: {{ startDate }}</span>
@@ -15,6 +15,7 @@
       <div
         v-for="(skill, index) in offer.skills"
         :key="offer.skills[index]"
+        class="mt-4"
       >
         <h5>Skills</h5>
         <span>{{ skill }}</span>
@@ -22,13 +23,13 @@
       <div class="d-flex flex-row-reverse">
         <button
           type="submit"
-          class="btn btn-success btn-sm"
+          class="btn btn-success btn-sm "
           @click="acceptOffer"
         >Accept
         </button>
         <button
           type="submit"
-          class="btn btn-danger btn-sm"
+          class="btn btn-danger btn-sm mr-2"
           @click="rejectOffer"
         >Reject
         </button>
@@ -64,6 +65,8 @@ export default {
         type: 'success',
         title: 'You have accepted an offer!',
       });
+
+      this.hideOffer();
     },
     rejectOffer(e) {
       e.preventDefault();
@@ -73,9 +76,17 @@ export default {
         type: 'warning',
         title: 'You have rejected an offer!',
       });
+
+      this.hideOffer();
+    },
+    ucFirst(text) {
+      if (typeof text !== 'string') {
+        return '';
+      }
+      return text.charAt(0).toUpperCase() + text.slice(1);
     },
     hideOffer() {
-      // Emit to hide this offer
+      this.disabled = true;
     },
   },
 };
@@ -85,7 +96,8 @@ export default {
     margin-bottom: 20px;
 
     &.disabled {
-        opacity: 0.8;
+        opacity: 0.55;
+        pointer-events: none
      }
   }
 </style>
