@@ -43,7 +43,7 @@ export default {
   },
   data() {
     return {
-      formStage: 2,
+      formStage: 1,
       offers: [],
     };
   },
