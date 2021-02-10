@@ -14,7 +14,6 @@ It is written in an OO MVC manner in ES6, the express server is routing the requ
 
 1. run `git clone` on the repository
 2. run `npm install` to install all dependencies
-3. run `cp .env.example .env` to create environmental variables file
 4. run `npm run start` on the root directory to run the NodeJS backend
 5. run `cd frontend && npm install` for installing the Vue SPA
 5. run `npm run dev` to serve the front-end website
