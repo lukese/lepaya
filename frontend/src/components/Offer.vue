@@ -14,13 +14,13 @@
             End Date: {{ endDate }}
           </span>
       </div>
-      <div
-        v-for="(skill, index) in offer.skills"
-        :key="offer.skills[index]"
-        class="mt-4"
-      >
-        <h5>Skills</h5>
-        <span>{{ skill }}</span>
+      <h5 class="mt-2">Skills</h5>
+      <div>
+        <span
+          v-for="(skill, index) in offer.skills"
+          :key="offer.skills[index]"
+          class="mt-4 mr-2"
+        >{{ skill }}</span>
       </div>
       <div class="d-flex flex-row-reverse">
         <button
