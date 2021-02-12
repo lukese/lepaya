@@ -4,8 +4,8 @@ import moment from 'moment';
 
 export class CompanyGenerator {
     public randomizer: Randoma
-    private startRange: Date;
-    private endRange: Date;
+    private readonly startRange: Date;
+    private readonly endRange: Date;
 
     constructor() {
         this.randomizer = new Randoma({seed: 10});
