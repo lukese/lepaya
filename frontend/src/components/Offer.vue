@@ -63,6 +63,10 @@ export default {
       e.preventDefault();
       console.log('Accepted');
 
+      // If offer with same date has already been accepted
+        // Throw an error
+        // show an error alert.
+
       this.$emit('offerStatusFilled', {
         type: 'success',
         title: 'You have accepted an offer!',
