@@ -20,7 +20,7 @@
           v-for="(skill, index) in offer.skills"
           :key="offer.skills[index]"
           class="mt-4 mr-2"
-        >{{ skill }}</span>
+        >{{ ucFirst(skill) }}</span>
       </div>
       <div class="d-flex flex-row-reverse">
         <button
