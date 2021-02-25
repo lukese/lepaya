@@ -44,3 +44,5 @@ Currently the disabled state is a simple SCSS styling implementation, this could
 
 Also I would have moved to VueX as the state becomes to get messy when more functionality is added and passed between components.
 
+Could have also created a kind of abstract factory rather than company generator
+
